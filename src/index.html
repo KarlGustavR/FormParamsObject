@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="formParamsApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Parameters App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="FormParamsObject.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+
+<div ng-controller="FormParamsController">
+  <button ng-click="showModal = true">Enter Parameters</button>
+  <div class="modal" ng-show="showModal">
+    <div class="modal-content">
+      <span class="close" ng-click="showModal = false">&times;</span>
+      <p>Enter your parameters below:</p>
+      <form ng-submit="setParam(paramForm)">
+        <label for="paramPath">Parameter Path:</label>
+        <input id="paramPath" type="text" ng-model="paramForm.path" placeholder="Parameter Path">
+
+        <label for="paramValue">Value:</label>
+        <input id="paramValue" type="text" ng-model="paramForm.value" placeholder="Value">
+
+        <button type="submit">Set Parameter</button>
+      </form>
+      <button ng-click="executeAlgorithm()">Execute Algorithm</button>
+    </div>
+  </div>
+
+  <div>
+    <p>Results:</p>
+    <pre>{{results | json}}</pre>
+  </div>
+</div>
+
+</body>
+</html>
