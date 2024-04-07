@@ -19,4 +19,4 @@ Open the index.html file or simply run it and run the test.js file to check for 
 
 #### 2. Enter different parameters by clicking "Set Parameter"
 
-#### 3. After all parameters have been added, click "Execute Algorithm
+#### 3. After all parameters have been added, click "Execute Algorithm"
